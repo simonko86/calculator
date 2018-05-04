@@ -62,20 +62,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tvResult.setText(String.valueOf(res));
                 break;
             case R.id.btnMul:
-                try
-                {
                     res = Integer.parseInt(num1) * Integer.parseInt(num2);
-                    if (res > 1000)
+                    if (res > 9999999)
                     {
                         tvResult.setText("Too large to multiply");
                     }
                     else {
                         tvResult.setText(String.valueOf(res));
                     }
-                } catch (Exception e)
-                {
-                    tvResult.setText("Cannot multiply");
-                }
                 break;
             case R.id.btnDiv:
                 try
@@ -84,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     tvResult.setText(String.valueOf(res));
                 } catch (Exception e)
                 {
-                    tvResult.setText("Cannot divide");
+                    tvResult.setText("Divide by 0 error");
                 }
                 break;
         }
